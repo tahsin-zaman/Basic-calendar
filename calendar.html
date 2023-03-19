@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <title>
+        Calendar
+    </title>
+</head>
+
+<!-- Headers for month and year at the top -->
+
+<h1 id="month"> Month </h1>
+<h1 id="year"> Year </h1>
+
+
+<!-- Buttons to change the week -->
+<button onclick= 'minusWeek()' class="prevBtn"> Previous Week  </button>
+<button onclick= 'addWeek()'class="nextBtn"> Next Week </button>
+
+
+<!-- Date time inputs -->
+<div> 
+<input class= "dateTime" type="datetime-local" value="2023-03-10T08:00">
+
+</div>
+
+<!-- Schedule button connecting to the notification function -->
+<button onclick='notification()' class="schedule"> Schedule  </button>
+
+
+<input type="text"> 
+
+
+<!-- body of the calendar using tables  -->
+
+<body> 
+
+
+    <table style="width:100%">
+
+
+<tr> 
+    <td>-------</td> 
+    <td>Sunday</td> 
+    <td>Monday</td> 
+    <td>Tuesday</td> 
+    <td>Wednesday</td> 
+    <td>Thursday</td> 
+    <td>Friday</td> 
+    <td>Saturday</td> 
+</tr>
+<tr>
+    <td >-------</td>
+    <td id="sun"></td>
+    <td id="mon"></td>
+    <td id="tue"></td>
+    <td id="wed"></td>
+    <td id="thur"></td>
+    <td id="fri"></td>
+    <td id="sat"></td>
+    
+</tr>
+
+<tr>
+    <td>00:00</td>
+    <td></td>
+    <td></td>  
+    <td></td>  
+    <td></td>    
+    <td></td>  
+    <td></td>  
+    <td></td>  
+   </tr>
+   <tr>
+    <td>01:00</td> 
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+</tr>
+<tr>
+    <td>02:00</td> <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>
+</tr>
+<tr>
+    <td>03:00</td> <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>
+</tr>
+<tr>
+    <td>04:00</td><td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td> 
+</tr>
+<tr>
+    <td>05:00</td> <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>
+</tr>
+<tr>
+    <td>06:00</td> <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>
+</tr>
+<tr>
+    <td>07:00</td> <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>
+</tr>
+<tr>
+    <td>08:00</td> <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>
+</tr>
+<tr>
+    <td>09:00</td> <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>
+</tr>
+<tr>
+    <td>10:00</td> <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>
+</tr>
+<tr>
+    <td>11:00</td> <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>
+</tr>
+<tr>
+    <td>12:00</td> <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>
+</tr>
+<tr>
+    <td>13:00</td> <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>
+</tr>
+<tr>
+    <td>14:00</td> <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>
+</tr>
+<tr>
+    <td>15:00</td> <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>
+</tr>
+<tr>
+    <td>16:00</td> <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>
+</tr>
+<tr>
+    <td>17:00</td> <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>
+</tr>
+<tr>
+    <td>18:00</td> <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>
+</tr>
+<tr>
+    <td>19:00</td><td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td> 
+</tr>
+<tr>
+    <td>20:00</td> <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>
+</tr>
+<tr>
+    <td>21:00</td> <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>
+</tr>
+<tr>
+    <td>22:00</td> <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>
+</tr>
+<tr>
+    <td>23:00</td> <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>  
+    <td></td>
+</tr>
+
+</table>
+
+
+
+
+
+<!-- CSS -->
+
+<style>
+
+
+table, th, tr{
+  border: 1px solid black;
+  border-collapse: collapse;
+  vertical-align:bottom;
+  table-layout: fixed;
+  width: 100;
+  
+  
+}
+
+td{
+    width: 25%;
+    border: 1px solid black;
+  border-collapse: collapse;
+  vertical-align:bottom;
+  padding: 10x;
+  empty-cells: show;
+  text-align: center;
+}
+
+
+h1{
+    text-align: center;
+}
+
+
+
+button{
+    color: blue;
+    border-color: blue;
+}
+
+
+
+</style>
+
+
+
+<script src="calendar.js"></script>
+
+
+
+
+
+
+
+</html>
+
+
+
